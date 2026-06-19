@@ -1,0 +1,4 @@
+hos=localhost
+port=808
+name=java11-demo
+debug=true

@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class StreamDemo2 {
 
@@ -78,6 +79,11 @@ public class StreamDemo2 {
         map.entrySet().stream()
                 .filter(e -> e.getKey() > 1)
                 .forEach(System.out::println);
+
+        System.out.println("================");
+        var byParity = Stream.of(1, 2, 3, 4)
+                .collect(Collectors.groupingBy(n -> n % 2 == 0));
+        System.out.println(byParity);
 
     }
 }
